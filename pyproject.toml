@@ -1,0 +1,21 @@
+[project]
+name = "testes-praticos-sql-xss-api"
+version = "0.1.0"
+description = "Laboratório de segurança ofensiva e defensiva em API de filmes: SQL Injection e XSS"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pytest",
+    "httpx",
+    "pydantic",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "security: testes de seguranca ofensiva e defensiva (OWASP)",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore:.*testclient.*:Warning",
+]
